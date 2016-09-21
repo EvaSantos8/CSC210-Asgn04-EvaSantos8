@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.evasantos.carloancalculator.MainActivity"
+    android:columnCount="2"
+    android:useDefaultMargins="true">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/fullPriceEditText"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:digits="0123456789"
+        android:maxLength="8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/fullPriceTextView"
+        android:layout_column="0"
+        android:layout_row="0"
+        android:layout_columnSpan="2"
+        android:hint="@string/enter_amount"
+        android:layout_gravity="fill_horizontal"
+        android:background="@color/price_background"
+        android:padding="@dimen/textview_padding"
+        android:elevation="@dimen/elevation" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/percentInterestTextView"
+        android:hint="@string/interest_percentage"
+        android:layout_gravity="center_vertical|right" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/percent_seekbar_height"
+        android:id="@+id/percentInterestSeekBar"
+        android:progress="10"
+        android:max="30"
+        android:layout_gravity="fill_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/monthTextView"
+        android:hint="@string/month"
+        android:layout_gravity="right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/monthAmountTextView"
+        android:layout_gravity="fill_horizontal"
+        android:background="@color/result_background"
+        android:gravity="center"
+        android:padding="@dimen/textview_padding"
+        android:elevation="@dimen/elevation"
+        android:elegantTextHeight="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/paymentLabelTextView"
+        android:hint="@string/monthly_payment"
+        android:layout_gravity="right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/monthlyPaymentTextView"
+        android:layout_gravity="fill_horizontal"
+        android:background="@color/result_background"
+        android:gravity="center"
+        android:padding="@dimen/textview_padding"
+        android:elevation="@dimen/elevation"
+        android:elegantTextHeight="false" />
+</GridLayout>

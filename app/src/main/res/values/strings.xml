@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Car Loan Calculator</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="interest_percentage">10%</string>
+    <string name="month">Months</string>
+    <string name="monthly_payment">Monthly Payment</string>
+</resources>
