@@ -39,6 +39,18 @@ public class MainActivity extends Activity {
         monthlyPaymentTextView = (TextView) findViewById(R.id.monthlyPaymentTextView);
         priceTextView.setText(currencyFormat.format(0));
         monthlyPaymentTextView.setText(currencyFormat.format(0));
+
+        EditText priceEditText =
+                (EditText) findViewById(R.id.priceEditText);
+        priceEditText.addTextChangedListener(amountEditTextWatcher);
+
+        EditText monthEditText =
+                (EditText) findViewById(R.id.monthEditText);
+        monthEditText.addTextChangedListener(monthEditTextWatcher);
+
+        SeekBar percentSeekBar =
+                (SeekBar) findViewById(R.id.percentSeekBar);
+        percentSeekBar.setOnSeekBarChangeListener(seekBarListener);
     }
     private void calculate() {
         // format percent and display in percentTextView
